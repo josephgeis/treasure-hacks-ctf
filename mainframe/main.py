@@ -4,7 +4,8 @@ import select
 import time
 
 RECV_TIMEOUT = 20
-SOLVE_TIMEOUT = 10
+SOLVE_TIMEOUT = 1
+
 
 class Puzzle:
     OPERS = {
@@ -13,13 +14,13 @@ class Puzzle:
         "*": lambda x, y: x * y
     }
 
-    def get_oper(self): 
+    def get_oper(self):
         return Puzzle.OPERS[self.oper]
 
     def solve(self) -> int:
         oper = self.get_oper()
         return oper(self.x, self.y)
-    
+
     def __str__(self):
         return f"{self.x} {self.oper} {self.y}"
 
@@ -28,12 +29,14 @@ class Puzzle:
         self.y = random.randint(1328044, 3328043)
         self.oper = ['+', '-', '*'][random.randint(0, 2)]
 
+
 def get_flag() -> str:
     flag: str
     with open("flag.txt") as fd:
         flag = fd.read()
 
     return f"Correct! FLAG: {flag}"
+
 
 class TCPHandler(socketserver.BaseRequestHandler):
 
@@ -52,7 +55,7 @@ class TCPHandler(socketserver.BaseRequestHandler):
         ready = select.select([self.request], [], [], RECV_TIMEOUT)
         if ready[0]:
             data = self.request.recv(128).strip()
-        
+
         t2 = time.time()
 
         if data is None:
@@ -62,7 +65,7 @@ class TCPHandler(socketserver.BaseRequestHandler):
                 ans = int(data)
             except ValueError:
                 ans = "invalid"
-        
+
         if ans == "invalid":
             self.request.sendall(b"Invalid response\n")
         elif ans == "timeout":
@@ -75,9 +78,10 @@ class TCPHandler(socketserver.BaseRequestHandler):
             else:
                 self.request.sendall(f"{get_flag()}\n".encode("utf8"))
 
+
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9648
-    
+
     with socketserver.ThreadingTCPServer((HOST, PORT), TCPHandler) as server:
         print(f"Serving on {HOST}:{PORT}")
         try:

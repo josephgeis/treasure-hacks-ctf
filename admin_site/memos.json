@@ -1,0 +1,17 @@
+{
+  "1": {
+    "id": "1",
+    "subject": "Secret plans",
+    "content": "Tonight, we will meet outside the coffee shop to raid the bank. FLAG: \\flag{}"
+  },
+  "2": {
+    "id": "2",
+    "subject": "Secret ingredient for caramel cookies",
+    "content": "The secret ingredient in the caramel cookies is extra salt mixed into the caramel."
+  },
+  "3": {
+    "id": "3",
+    "subject": "Closing protocols",
+    "content": "Please make sure to turn off the oven and latch the refrigerator closed before leaving."
+  }
+}
