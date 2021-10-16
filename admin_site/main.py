@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect, make_response, flash
+from flask import Flask, render_template, request, redirect, make_response, flash, abort
 import json
 
 app = Flask(__name__)
 
 app.secret_key = "dev"
-memos: dict
+memos: dict = {}
 
 def parse_cookie(data: str = None) -> dict:
     if not data:
@@ -46,8 +46,16 @@ def read_admin_panel():
 def read_memo(id: str):
     if memo := memos.get(id):
         return render_template("memo.html", memo=memo)
+    
+    abort(404)
 
-if __name__ == "__main__":
+def create_app():
+    global memos
+
     with open("memos.json") as fd:
         memos = json.loads(fd.read())
-    app.run()
+    
+    return app
+
+if __name__ == "__main__":
+    create_app().run()
