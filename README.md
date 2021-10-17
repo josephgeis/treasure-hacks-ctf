@@ -1,3 +1,8 @@
+# Treasure Hacks CTF Challenges
+
+Designed by Joseph Geis ([@josephgeis](https://github.com/josephgeis)).
+Licensed under the MIT license
+
 # Progression
 
 1. Audio/morse challenge
