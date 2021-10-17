@@ -9,7 +9,9 @@
 
 # Audio Challenge
 
-**Clue:** Join the `Audio Flag` voice channel to hear a secret message, which is your flag. (To submit it as a flag, type it as `\flag{<message>}`, replacing `<message>` with the secret message.)
+**Clue:** Welcome aboard agent! We have been tracking some criminals who have been committing crimes around Southern California. We need more cybersecurity agents like you to help gain intel. Join the `Audio Flag` voice channel to hear a secret message, which is your first flag. (To submit it as a flag, type it as `\flag{<message>}`, replacing `<message>` with the secret message.)
+
+If you are hearing impaired, please DM josephDaCoder to get a transcription.
 
 **Flag:** `hackme`
 
@@ -19,9 +21,9 @@
 
 **Clue:** We've gained some intel on the criminals. They operate a coffee shop in Dana Point, CA. Their website looks pretty normal, which seems suspicious. Take a good look around to see if you can find anything unusual. Go to https://a.ctf.treasurehacks.dev/index.html.
 
-**Hint:** Selecting text can reveal things you might not normally see.
+**Hint:** Selecting text can reveal things you might not normally see. You could also try using the source code.
 
-**Flag:** `Y!!q2f~xq*:m_~&e3.ee9,C5`
+**Flag:** `pdmRgS4ScTeWRhrp`
 
 ### Solution
 
@@ -31,9 +33,9 @@ The flag is hidden in plain sight
 
 **Clue:** Great job, Agent! We also noticed on the menu page that one of the product photos has an abnormality. There might be a flag which will help us gain more info. Go to https://a.ctf.treasurehacks.dev/menu.html.
 
-**Hint:** Look at the image for boba. Did you know that you can hide `.zip`s in many normal files, like JPEG images?
+**Hint:** Look at the image file sizes. Look for which one is abnormally larger. Did you know that you can hide `.zip`s in many normal files, like JPEG images?
 
-**Flag:** `e44B,%y]_5:bNK&*<KD"*Tuj`
+**Flag:** `LOZqJxitPnkw5tyi`
 
 ### Solution
 
@@ -51,7 +53,7 @@ Access the admin panel at https://b.ctf.treasurehacks.dev/
 
 **Hint:** There might be something stored in the cookies. Use your browser's developer tools or an extension (try Cookie-Editor on Chrome) to view your cookies.
 
-**Flag:**
+**Flag:** `ok8mWDVCS36Caipa`
 
 ### Solution
 
@@ -73,7 +75,9 @@ Subject: New memo available
 A new memo is available for your viewing. Please access it at https://b.ctf.treasurehacks.dev/memo/3
 ```
 
-**Flag:**
+**Hint**: Take a look at the ID in the URL. What would happen if you changed it from `3` to something lower?
+
+**Flag:** `XXUWpamNQqxYk98D`
 
 ### Solution
 
@@ -83,8 +87,8 @@ A new memo is available for your viewing. Please access it at https://b.ctf.trea
 
 ## TCP Service
 
-**Clue:** We ran a port scan on their admin panel server (b.ctf.treasurehacks.dev) and discovered a TCP service running on port 9648. Try connecting to it to see what you find. You can use the `telnet` or `nc` utilities to connect to TCP services.
+**Clue:** We ran a port scan on their admin panel server (b.ctf.treasurehacks.dev) and discovered a TCP service running on port 9648. Try connecting to it to see what you find. (You can use the `telnet` or `nc` utilities to connect to TCP services.)
 
 **Hint:** This might be trickier for many, compared to the previous challenges. When you connect to the TCP service using `telnet` or `nc`, you are presented with a math problem that you probably won't be able to do in your head. However, if you take too long, it will either reject your answer or timeout. You're going to need to automate this process somehow. Try writing a program. The `socket` library for Python is a good start.
 
-**Flag:**
+**Flag:** `qKdZJ24VdvOg0Ji0`
