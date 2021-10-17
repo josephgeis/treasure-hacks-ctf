@@ -13,6 +13,8 @@
 
 If you are hearing impaired, please DM josephDaCoder to get a transcription.
 
+**Hint:** .... .- -.-. -.- -- . (also give if hearing impaired)
+
 **Flag:** `hackme`
 
 # Coffee Shop Website
@@ -31,9 +33,9 @@ The flag is hidden in plain sight
 
 ## `menu.zip`: Zipped
 
-**Clue:** Great job, Agent! We also noticed on the menu page that one of the product photos has an abnormality. There might be a flag which will help us gain more info. Go to https://a.ctf.treasurehacks.dev/menu.html.
+**Clue:** We also noticed on the menu page that one of the product photos has an abnormality. There might be a flag which will help us gain more info. Go to https://a.ctf.treasurehacks.dev/menu.html.
 
-**Hint:** Look at the image file sizes. Look for which one is abnormally larger. Did you know that you can hide `.zip`s in many normal files, like JPEG images?
+**Hint:** Look at the image file sizes. Notice that one of them is abnormally larger. Did you know that you can hide `.zip`s in many normal files, like JPEG images? Also, remember that flags start with `\flag`.
 
 **Flag:** `LOZqJxitPnkw5tyi`
 
