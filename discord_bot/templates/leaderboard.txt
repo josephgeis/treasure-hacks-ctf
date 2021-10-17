@@ -1,0 +1,4 @@
+**Current leaderboard as of {{now}}**
+
+{% for entry in entries %}{{loop.index}}) <@{{entry.user}}> – score: {{entry.points}}
+{%endfor%}

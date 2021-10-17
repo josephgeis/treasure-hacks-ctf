@@ -1,0 +1,5 @@
+**Clue for Flag #{{number}}**
+
+{{clue}}
+
+Stuck? Type `\hint` for help. (Note: if you use a hint, you can only score half of the possible points on this flag.)

@@ -1,0 +1,6 @@
+**Hints for Flag #{{flag_number}}**
+{% for hint in hints %}
+__Hint {{loop.index}} of {{hints|length}}__
+{{hint}}
+{%endfor%}
+Type `\clue` to repeat the clue.
